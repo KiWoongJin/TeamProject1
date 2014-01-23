@@ -7,8 +7,11 @@
 //
 
 #import "SelectViewController.h"
+#import "MyPageViewController.h"
+#import "NewspeedViewController.h"
+#import "SettingViewController.h"
 
-@interface SelectViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface SelectViewController () <UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *table;
 @end
@@ -28,10 +31,21 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row == 2) {
-        
+    if (indexPath.row == 1) {
+        MyPageViewController *nextVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MyPageVC"];
+        [UIApplication sharedApplication].keyWindow.rootViewController = nextVC;
+    }
+    else if(indexPath.row == 2){
+        NewspeedViewController *nextVC = [self.storyboard instantiateViewControllerWithIdentifier:@"NewSpeedVC"];
+        [UIApplication sharedApplication].keyWindow.rootViewController = nextVC;
+    }
+    else if(indexPath.row == 4){
+        SettingViewController *nextVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SettingVC"];
+        [UIApplication sharedApplication].keyWindow.rootViewController = nextVC;
     }
 }
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

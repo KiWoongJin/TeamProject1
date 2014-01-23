@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "Picture2Cell.h"
+#import "PictureCell.h"
 
-@interface ViewController ()
+@interface ViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 
 @end
 
