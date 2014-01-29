@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ContentsViewController : UIViewController
-
+//@property (weak, nonatomic) NSString *imgName;
 @end

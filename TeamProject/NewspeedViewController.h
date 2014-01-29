@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface NewspeedViewController : UIViewController
+#import "CHTCollectionViewWaterfallLayout.h"
+@interface NewspeedViewController : UIViewController <UICollectionViewDataSource, CHTCollectionViewDelegateWaterfallLayout>
+@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (nonatomic) CGFloat cellWidth;
 
 @end

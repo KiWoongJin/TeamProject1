@@ -10,6 +10,7 @@
 
 @interface ContentsViewController () <UIActionSheetDelegate>
 
+
 @end
 
 @implementation ContentsViewController
@@ -32,6 +33,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+   // NSLog(@"%@", self.imgName);
 }
 
 - (void)didReceiveMemoryWarning
