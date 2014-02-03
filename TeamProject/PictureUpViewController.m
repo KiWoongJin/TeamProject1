@@ -9,6 +9,7 @@
 #import "PictureUpViewController.h"
 #import "ThumbnailCell.h"
 
+
 @interface PictureUpViewController () <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -19,6 +20,7 @@
 
 @implementation PictureUpViewController{
     NSMutableArray *thArr;
+    UIPopoverController *popoverController;
 }
 - (IBAction)ShowAction:(id)sender {
     UIActionSheet *sheet = [[UIActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:@"취소" destructiveButtonTitle:nil otherButtonTitles:@"사진 촬영", @"앨범에서 불러오기", nil];
@@ -61,8 +63,11 @@
         imagePicker.allowsEditing = YES;
         imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
         [self presentModalViewController:imagePicker animated:YES];
+        
+        
     }
 }
+
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
     UIImage *editedImage = [info objectForKey:UIImagePickerControllerEditedImage];
     UIImage *originalImage = [info objectForKey:UIImagePickerControllerEditedImage];
@@ -73,6 +78,8 @@
     [self.collectionView reloadData];
     
     [picker dismissModalViewControllerAnimated:YES];
+    
+
 }
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

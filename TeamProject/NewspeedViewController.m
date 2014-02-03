@@ -29,6 +29,7 @@
     }
     return self;
 }
+
 #pragma mark - Accessors
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
@@ -92,8 +93,9 @@
     //cell.displayString = [NSString stringWithFormat:@"%d", indexPath.row];
     
     // cell.displayLabel.text = [NSString stringWithFormat:@"%d", indexPath.row];
-    
-    cell.imgView.image =[UIImage imageNamed:[pictureName1 objectAtIndex:indexPath.row]];
+    UIImage *btnImage = [UIImage imageNamed:[pictureName1 objectAtIndex:indexPath.row]];
+    [cell.imgBtn setImage:btnImage forState:UIControlStateNormal];
+    //cell.imgView.image =[UIImage imageNamed:[pictureName1 objectAtIndex:indexPath.row]];
     return cell;
     
 }
@@ -110,6 +112,12 @@
     [super willAnimateRotationToInterfaceOrientation:toInterfaceOrientation
                                             duration:duration];
     [self updateLayout];
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+  
+        ContentsViewController *nextVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ContentVC"];
+        [UIApplication sharedApplication].keyWindow.rootViewController = nextVC;
 }
 
 - (void)updateLayout {
@@ -135,6 +143,19 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+//    UIBarButtonItem *addAcc = [[UIBarButtonItem alloc]
+//                               initWithTitle:@"Add"
+//                               style:UIBarButtonItemStylePlain
+//                               target:self
+//                               action:@selector(addNewAcc)];
+//    UIBarButtonItem *delAcc = [[UIBarButtonItem alloc]
+//                               initWithTitle:@"Del"
+//                               style:UIBarButtonItemStylePlain
+//                               target:self
+//                               action:@selector(DeleteButtonAction)];
+//    
+//    NSArray *arrBtns = [[NSArray alloc]initWithObjects:addAcc, delAcc, nil];
+//    self.navigationItem.rightBarButtonItems = arrBtns;
     pictureName1 = @[@"photo1.jpg", @"photo2.jpg",@"photo3.jpg",@"photo4.jpg",@"photo5.jpg",@"photo6.jpg" ,@"photo7.jpg", @"photo8.jpg"];
     [self.view addSubview:self.collectionView];
     [self updateLayout];

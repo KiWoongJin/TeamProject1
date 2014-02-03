@@ -11,7 +11,7 @@
 @interface CHTCollectionViewWaterfallCell : UICollectionViewCell
 @property (nonatomic, copy) NSString *displayString;
 
-@property (strong, nonatomic) IBOutlet UIImageView *imgView;
+@property (strong, nonatomic) IBOutlet UIButton *imgBtn;
 
 
 @end

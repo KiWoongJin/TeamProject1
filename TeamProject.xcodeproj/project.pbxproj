@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		002912E21898E6A400876F95 /* CHTCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 002912DF1898E6A400876F95 /* CHTCollectionViewWaterfallLayout.m */; };
 		002912E31898E6A400876F95 /* CHTCollectionViewWaterfallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 002912E11898E6A400876F95 /* CHTCollectionViewWaterfallCell.m */; };
+		006115A0189F6EE400CE8C02 /* photo0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0061159F189F6EE400CE8C02 /* photo0.jpg */; };
 		00AF7D311891F20900FB9521 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00AF7D301891F20900FB9521 /* QuartzCore.framework */; };
 		00AF7D331891F21100FB9521 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00AF7D321891F21100FB9521 /* CoreLocation.framework */; };
 		00AF7D361891F4D800FB9521 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AF7D351891F4D800FB9521 /* SearchViewController.m */; };
@@ -75,6 +76,7 @@
 		002912DF1898E6A400876F95 /* CHTCollectionViewWaterfallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallLayout.m; sourceTree = "<group>"; };
 		002912E01898E6A400876F95 /* CHTCollectionViewWaterfallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallCell.h; sourceTree = "<group>"; };
 		002912E11898E6A400876F95 /* CHTCollectionViewWaterfallCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallCell.m; sourceTree = "<group>"; };
+		0061159F189F6EE400CE8C02 /* photo0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo0.jpg; sourceTree = "<group>"; };
 		00AF7D301891F20900FB9521 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		00AF7D321891F21100FB9521 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		00AF7D341891F4D800FB9521 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 		659170F31886CE650047EBFB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0061159F189F6EE400CE8C02 /* photo0.jpg */,
 				65412CAA1887152D00B512AC /* photo1.jpg */,
 				65412CAB1887152D00B512AC /* photo2.jpg */,
 				65412CAC1887152D00B512AC /* photo3.jpg */,
@@ -450,6 +453,7 @@
 				00AF7D6F1892306500FB9521 /* TrackingDotHalo@2x.png in Resources */,
 				00AF7D621892306500FB9521 /* desktop.ini in Resources */,
 				00AF7D671892306500FB9521 /* icon_clustering@2x.png in Resources */,
+				006115A0189F6EE400CE8C02 /* photo0.jpg in Resources */,
 				659171001886CE650047EBFB /* Main.storyboard in Resources */,
 				00AF7D631892306500FB9521 /* desktop.ini in Resources */,
 				00AF7D6B1892306500FB9521 /* poweredby@2x.png in Resources */,
