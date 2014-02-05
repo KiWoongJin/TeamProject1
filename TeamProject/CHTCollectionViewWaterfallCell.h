@@ -12,6 +12,7 @@
 @property (nonatomic, copy) NSString *displayString;
 
 @property (strong, nonatomic) IBOutlet UIButton *imgBtn;
+@property (weak, nonatomic) IBOutlet UIButton *imgBtn2;
 
 
 @end

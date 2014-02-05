@@ -8,12 +8,15 @@
 
 #import "ContentsViewController.h"
 #define IMAGE_NUM 5
+#define SCREEN_FRAME [[UIScreen mainScreen] applicationFrame]
 
 @interface ContentsViewController () <UIActionSheetDelegate, UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>{
     UIPageControl *pageControl;
     int loadedPageCount;
 }
+@property (weak, nonatomic) IBOutlet UIScrollView *scorll;
 
+@property (weak, nonatomic) IBOutlet UIToolbar *toolBar;
 @property (weak, nonatomic) IBOutlet UITextField *userInput;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
@@ -127,6 +130,14 @@
     [self loadContentsPage:0];
     [self loadContentsPage:1];
     
+//    self.toolBar.frame = CGRectMake(0,SCREEN_FRAME.size.height-self.toolBar.frame.size.height,SCREEN_FRAME.size.width,self.toolBar.frame.size.height);
+//    self.toolBar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    
+}
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    self.scorll.contentSize = CGSizeMake(320, 1000);
 }
 
 - (void)didReceiveMemoryWarning

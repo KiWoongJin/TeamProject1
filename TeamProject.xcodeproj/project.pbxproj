@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00278B3518A1D2180091A3F4 /* LikeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00278B3418A1D2180091A3F4 /* LikeCell.m */; };
+		00278B3818A1D22A0091A3F4 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00278B3718A1D22A0091A3F4 /* CommentCell.m */; };
+		00278B3B18A1D2380091A3F4 /* FollowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00278B3A18A1D2380091A3F4 /* FollowCell.m */; };
+		00278B7F18A1FF820091A3F4 /* LikeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00278B7E18A1FF820091A3F4 /* LikeViewController.m */; };
+		00278BC318A212C00091A3F4 /* MypageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00278BC218A212C00091A3F4 /* MypageCell.m */; };
+		00278BC618A219480091A3F4 /* MypageCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00278BC518A219480091A3F4 /* MypageCollectionCell.m */; };
+		00278BC918A21A770091A3F4 /* MypageCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00278BC818A21A770091A3F4 /* MypageCollectionViewController.m */; };
+		00278BCC18A22EAA0091A3F4 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00278BCB18A22EAA0091A3F4 /* ProfileViewController.m */; };
 		002912E21898E6A400876F95 /* CHTCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 002912DF1898E6A400876F95 /* CHTCollectionViewWaterfallLayout.m */; };
 		002912E31898E6A400876F95 /* CHTCollectionViewWaterfallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 002912E11898E6A400876F95 /* CHTCollectionViewWaterfallCell.m */; };
 		006115A0189F6EE400CE8C02 /* photo0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0061159F189F6EE400CE8C02 /* photo0.jpg */; };
@@ -72,6 +80,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00278B3318A1D2180091A3F4 /* LikeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LikeCell.h; sourceTree = "<group>"; };
+		00278B3418A1D2180091A3F4 /* LikeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LikeCell.m; sourceTree = "<group>"; };
+		00278B3618A1D22A0091A3F4 /* CommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentCell.h; sourceTree = "<group>"; };
+		00278B3718A1D22A0091A3F4 /* CommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentCell.m; sourceTree = "<group>"; };
+		00278B3918A1D2380091A3F4 /* FollowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowCell.h; sourceTree = "<group>"; };
+		00278B3A18A1D2380091A3F4 /* FollowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowCell.m; sourceTree = "<group>"; };
+		00278B7D18A1FF820091A3F4 /* LikeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LikeViewController.h; sourceTree = "<group>"; };
+		00278B7E18A1FF820091A3F4 /* LikeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LikeViewController.m; sourceTree = "<group>"; };
+		00278BC118A212C00091A3F4 /* MypageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MypageCell.h; sourceTree = "<group>"; };
+		00278BC218A212C00091A3F4 /* MypageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MypageCell.m; sourceTree = "<group>"; };
+		00278BC418A219480091A3F4 /* MypageCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MypageCollectionCell.h; sourceTree = "<group>"; };
+		00278BC518A219480091A3F4 /* MypageCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MypageCollectionCell.m; sourceTree = "<group>"; };
+		00278BC718A21A770091A3F4 /* MypageCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MypageCollectionViewController.h; sourceTree = "<group>"; };
+		00278BC818A21A770091A3F4 /* MypageCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MypageCollectionViewController.m; sourceTree = "<group>"; };
+		00278BCA18A22EAA0091A3F4 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		00278BCB18A22EAA0091A3F4 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		002912DE1898E6A400876F95 /* CHTCollectionViewWaterfallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallLayout.h; sourceTree = "<group>"; };
 		002912DF1898E6A400876F95 /* CHTCollectionViewWaterfallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallLayout.m; sourceTree = "<group>"; };
 		002912E01898E6A400876F95 /* CHTCollectionViewWaterfallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallCell.h; sourceTree = "<group>"; };
@@ -313,6 +337,22 @@
 				00AF7D381891FB4900FB9521 /* PictureUpViewController.m */,
 				00BC07DA1897647700D7AE3E /* ThumbnailCell.h */,
 				00BC07DB1897647700D7AE3E /* ThumbnailCell.m */,
+				00278B3318A1D2180091A3F4 /* LikeCell.h */,
+				00278B3418A1D2180091A3F4 /* LikeCell.m */,
+				00278B3618A1D22A0091A3F4 /* CommentCell.h */,
+				00278B3718A1D22A0091A3F4 /* CommentCell.m */,
+				00278B3918A1D2380091A3F4 /* FollowCell.h */,
+				00278B3A18A1D2380091A3F4 /* FollowCell.m */,
+				00278B7D18A1FF820091A3F4 /* LikeViewController.h */,
+				00278B7E18A1FF820091A3F4 /* LikeViewController.m */,
+				00278BC118A212C00091A3F4 /* MypageCell.h */,
+				00278BC218A212C00091A3F4 /* MypageCell.m */,
+				00278BC418A219480091A3F4 /* MypageCollectionCell.h */,
+				00278BC518A219480091A3F4 /* MypageCollectionCell.m */,
+				00278BC718A21A770091A3F4 /* MypageCollectionViewController.h */,
+				00278BC818A21A770091A3F4 /* MypageCollectionViewController.m */,
+				00278BCA18A22EAA0091A3F4 /* ProfileViewController.h */,
+				00278BCB18A22EAA0091A3F4 /* ProfileViewController.m */,
 			);
 			path = TeamProject;
 			sourceTree = "<group>";
@@ -477,19 +517,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				00AFF5311890D6D60025EB8D /* NewspeedViewController.m in Sources */,
+				00278B7F18A1FF820091A3F4 /* LikeViewController.m in Sources */,
 				65412CA31886E5A100B512AC /* SelectViewController.m in Sources */,
 				00BC07DC1897647700D7AE3E /* ThumbnailCell.m in Sources */,
 				00AF7D361891F4D800FB9521 /* SearchViewController.m in Sources */,
 				659171031886CE650047EBFB /* ViewController.m in Sources */,
 				65412CA61886FABC00B512AC /* ContentsViewController.m in Sources */,
 				002912E31898E6A400876F95 /* CHTCollectionViewWaterfallCell.m in Sources */,
+				00278BCC18A22EAA0091A3F4 /* ProfileViewController.m in Sources */,
+				00278B3B18A1D2380091A3F4 /* FollowCell.m in Sources */,
+				00278BC318A212C00091A3F4 /* MypageCell.m in Sources */,
 				00AFF52B1890D1FD0025EB8D /* PictureCell.m in Sources */,
+				00278BC918A21A770091A3F4 /* MypageCollectionViewController.m in Sources */,
 				00AFF5421890FC5F0025EB8D /* SettingViewController.m in Sources */,
+				00278BC618A219480091A3F4 /* MypageCollectionCell.m in Sources */,
 				65412CA918870D5E00B512AC /* MyPageViewController.m in Sources */,
 				002912E21898E6A400876F95 /* CHTCollectionViewWaterfallLayout.m in Sources */,
+				00278B3818A1D22A0091A3F4 /* CommentCell.m in Sources */,
 				659170FD1886CE650047EBFB /* AppDelegate.m in Sources */,
 				659170F91886CE650047EBFB /* main.m in Sources */,
 				00AF7D391891FB4900FB9521 /* PictureUpViewController.m in Sources */,
+				00278B3518A1D2180091A3F4 /* LikeCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

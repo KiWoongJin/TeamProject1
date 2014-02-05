@@ -10,6 +10,7 @@
 #import "MyPageViewController.h"
 #import "NewspeedViewController.h"
 #import "SettingViewController.h"
+#import "LikeViewController.h"
 
 @interface SelectViewController () <UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate>
 
@@ -37,6 +38,10 @@
     }
     else if(indexPath.row == 2){
         NewspeedViewController *nextVC = [self.storyboard instantiateViewControllerWithIdentifier:@"NewSpeedVC"];
+        [UIApplication sharedApplication].keyWindow.rootViewController = nextVC;
+    }
+    else if (indexPath.row == 3){
+        LikeViewController *nextVC = [self.storyboard instantiateViewControllerWithIdentifier:@"LikeVC"];
         [UIApplication sharedApplication].keyWindow.rootViewController = nextVC;
     }
     else if(indexPath.row == 4){
