@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ThumbDelegate.h"
 
 @interface ThumbnailCell : UICollectionViewCell
+@property (weak)id <ThumbDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UIImageView *thumbImage;
-@property (weak, nonatomic) IBOutlet UIButton *thBtn;
+
 
 @end

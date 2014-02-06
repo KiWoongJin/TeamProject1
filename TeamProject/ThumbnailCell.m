@@ -18,6 +18,9 @@
     }
     return self;
 }
+- (IBAction)removeBtn:(id)sender {
+    [self.delegate removeImg:self];
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.

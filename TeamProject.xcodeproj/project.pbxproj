@@ -80,6 +80,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00152D6F18A34CBA004573AC /* ThumbDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThumbDelegate.h; sourceTree = "<group>"; };
 		00278B3318A1D2180091A3F4 /* LikeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LikeCell.h; sourceTree = "<group>"; };
 		00278B3418A1D2180091A3F4 /* LikeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LikeCell.m; sourceTree = "<group>"; };
 		00278B3618A1D22A0091A3F4 /* CommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentCell.h; sourceTree = "<group>"; };
@@ -353,6 +354,7 @@
 				00278BC818A21A770091A3F4 /* MypageCollectionViewController.m */,
 				00278BCA18A22EAA0091A3F4 /* ProfileViewController.h */,
 				00278BCB18A22EAA0091A3F4 /* ProfileViewController.m */,
+				00152D6F18A34CBA004573AC /* ThumbDelegate.h */,
 			);
 			path = TeamProject;
 			sourceTree = "<group>";

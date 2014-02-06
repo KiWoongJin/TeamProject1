@@ -500,10 +500,32 @@
                                     <outlet property="delegate" destination="Gvw-It-Xdo" id="bJc-s4-25E"/>
                                 </connections>
                             </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OIr-26-hCK">
+                                <rect key="frame" x="0.0" y="360" width="320" height="208"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MAP_CELL" id="Viq-l9-hN3">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Viq-l9-hN3" id="XN5-ic-nem">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Gvw-It-Xdo" id="NkI-5H-Fpf"/>
+                                    <outlet property="delegate" destination="Gvw-It-Xdo" id="QLK-6v-u0U"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="위  치" id="bKM-IC-gvR"/>
+                    <connections>
+                        <outlet property="table" destination="OIr-26-hCK" id="bYB-15-Mgb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3kT-OL-JVm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -531,10 +553,6 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="sWA-Sx-dbd">
-                                <rect key="frame" x="0.0" y="176" width="320" height="186"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="내용을 입력해 주세요" id="498-zP-RiP">
                                 <rect key="frame" x="0.0" y="442" width="326" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -602,14 +620,13 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="deleteThumb:" destination="qap-R7-hte" eventType="touchUpInside" id="Ryh-KL-zJc"/>
+                                                        <action selector="removeBtn:" destination="re8-NB-ayn" eventType="touchUpInside" id="6du-bZ-Pi5"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <outlet property="thBtn" destination="NUX-u6-NCu" id="h4J-t7-mQ7"/>
                                             <outlet property="thumbImage" destination="9cl-sh-NeZ" id="JJV-IC-oTs"/>
                                         </connections>
                                     </collectionViewCell>
@@ -619,6 +636,10 @@
                                     <outlet property="delegate" destination="qap-R7-hte" id="Nyy-sQ-NDg"/>
                                 </connections>
                             </collectionView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="CPt-hy-CPb">
+                                <rect key="frame" x="0.0" y="176" width="320" height="186"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -637,7 +658,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="bta-ZV-jLV" id="OAF-BB-cNC"/>
-                        <outlet property="imageView" destination="sWA-Sx-dbd" id="RCz-hJ-UV4"/>
+                        <outlet property="scorllView" destination="CPt-hy-CPb" id="jRr-PH-2SW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5eJ-Mb-b5O" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1039,7 +1060,6 @@
         <!--Navigation Controller-->
         <scene sceneID="uuu-oD-Hsb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xkx-7i-wTQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="SettingVC" automaticallyAdjustsScrollViewInsets="NO" id="Un7-nY-PNO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WgT-xF-Cwi">
@@ -1051,6 +1071,7 @@
                         <segue destination="rgd-Wr-6b5" kind="relationship" relationship="rootViewController" id="eDi-bx-tAv"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xkx-7i-wTQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3439" y="156"/>
         </scene>
@@ -1165,9 +1186,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="flh-wv-ili"/>
-        <segue reference="39O-IW-aYw"/>
-        <segue reference="ZD8-Fq-xxK"/>
-        <segue reference="lyT-RZ-bEi"/>
+        <segue reference="Edj-Fk-esP"/>
+        <segue reference="5XL-MD-nth"/>
+        <segue reference="XFf-NH-7F7"/>
+        <segue reference="Bs7-k6-Feo"/>
     </inferredMetricsTieBreakers>
 </document>
