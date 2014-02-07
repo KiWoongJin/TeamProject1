@@ -66,7 +66,7 @@
 }
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    self.scrollView.contentSize = CGSizeMake(320, 890);
+    self.scrollView.contentSize = CGSizeMake(320, 3500);
 }
 
 - (void)didReceiveMemoryWarning

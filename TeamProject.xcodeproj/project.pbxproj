@@ -42,6 +42,7 @@
 		00AFF5311890D6D60025EB8D /* NewspeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AFF5301890D6D60025EB8D /* NewspeedViewController.m */; };
 		00AFF5421890FC5F0025EB8D /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AFF5411890FC5F0025EB8D /* SettingViewController.m */; };
 		00BC07DC1897647700D7AE3E /* ThumbnailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BC07DB1897647700D7AE3E /* ThumbnailCell.m */; };
+		00FF3AE618A4B948004D56BD /* Newspeed2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FF3AE518A4B948004D56BD /* Newspeed2ViewController.m */; };
 		65412CA31886E5A100B512AC /* SelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65412CA21886E5A100B512AC /* SelectViewController.m */; };
 		65412CA61886FABC00B512AC /* ContentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65412CA51886FABC00B512AC /* ContentsViewController.m */; };
 		65412CA918870D5E00B512AC /* MyPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65412CA818870D5E00B512AC /* MyPageViewController.m */; };
@@ -152,6 +153,8 @@
 		00AFF5411890FC5F0025EB8D /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		00BC07DA1897647700D7AE3E /* ThumbnailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbnailCell.h; sourceTree = "<group>"; };
 		00BC07DB1897647700D7AE3E /* ThumbnailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbnailCell.m; sourceTree = "<group>"; };
+		00FF3AE418A4B948004D56BD /* Newspeed2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Newspeed2ViewController.h; sourceTree = "<group>"; };
+		00FF3AE518A4B948004D56BD /* Newspeed2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Newspeed2ViewController.m; sourceTree = "<group>"; };
 		65412CA11886E5A100B512AC /* SelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectViewController.h; sourceTree = "<group>"; };
 		65412CA21886E5A100B512AC /* SelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectViewController.m; sourceTree = "<group>"; };
 		65412CA41886FABC00B512AC /* ContentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentsViewController.h; sourceTree = "<group>"; };
@@ -355,6 +358,8 @@
 				00278BCA18A22EAA0091A3F4 /* ProfileViewController.h */,
 				00278BCB18A22EAA0091A3F4 /* ProfileViewController.m */,
 				00152D6F18A34CBA004573AC /* ThumbDelegate.h */,
+				00FF3AE418A4B948004D56BD /* Newspeed2ViewController.h */,
+				00FF3AE518A4B948004D56BD /* Newspeed2ViewController.m */,
 			);
 			path = TeamProject;
 			sourceTree = "<group>";
@@ -523,6 +528,7 @@
 				65412CA31886E5A100B512AC /* SelectViewController.m in Sources */,
 				00BC07DC1897647700D7AE3E /* ThumbnailCell.m in Sources */,
 				00AF7D361891F4D800FB9521 /* SearchViewController.m in Sources */,
+				00FF3AE618A4B948004D56BD /* Newspeed2ViewController.m in Sources */,
 				659171031886CE650047EBFB /* ViewController.m in Sources */,
 				65412CA61886FABC00B512AC /* ContentsViewController.m in Sources */,
 				002912E31898E6A400876F95 /* CHTCollectionViewWaterfallCell.m in Sources */,

@@ -1,29 +1,28 @@
 //
-//  NewspeedViewController.m
+//  Newspeed2ViewController.m
 //  TeamProject
 //
-//  Created by SDT-1 on 2014. 1. 23..
+//  Created by SDT-1 on 2014. 2. 7..
 //  Copyright (c) 2014년 hongik. All rights reserved.
 //
 
-#import "NewspeedViewController.h"
-#import "ContentsViewController.h"
+#import "Newspeed2ViewController.h"
 #import "CHTCollectionViewWaterfallCell.h"
 
 #define CELL_WIDTH 160
 #define CELL_COUNT 8
-#define CELL_IDENTIFIER @"TEST_CELL"
+#define CELL_IDENTIFIER @"TEST2_CELL"
 
-@interface NewspeedViewController ()
+@interface Newspeed2ViewController ()
 @property (nonatomic, strong) NSMutableArray *cellHeights;
-@property (weak, nonatomic) IBOutlet UIButton *button;
-@property (weak, nonatomic) IBOutlet UIView *container;
+
+
 @end
 
-@implementation NewspeedViewController
+@implementation Newspeed2ViewController
 {
     NSArray *pictureName1;
-  
+    
 }
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
@@ -66,27 +65,6 @@
     }
     return _cellHeights;
 }
-
-- (IBAction)ChooseButton:(id)sender {
-    UISegmentedControl *control = (UISegmentedControl *)sender;
-    if (control.selectedSegmentIndex == 0) {
-
-        [self.container setHidden:YES];
-        [self.collectionView setHidden:NO];
-        
-    }
-    else if(control.selectedSegmentIndex ==1){
-
-        [self.container setHidden:NO];
-        [self.collectionView setHidden:YES];
-    }
-  
-    //[self.collectionView reloadData];
-    [self.view addSubview:self.collectionView];
-    
-    [self.collectionView reloadData];
-    
-}
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return 8;
 }
@@ -94,13 +72,13 @@
     return 1;
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-
+    
     CHTCollectionViewWaterfallCell *cell =
     (CHTCollectionViewWaterfallCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CELL_IDENTIFIER
                                                                                 forIndexPath:indexPath];
     
     UIImage *btnImage = [UIImage imageNamed:[pictureName1 objectAtIndex:indexPath.row]];
-    [cell.imgBtn setImage:btnImage forState:UIControlStateNormal];
+    [cell.imgBtn3 setImage:btnImage forState:UIControlStateNormal];
     //cell.imgView.image =[UIImage imageNamed:[pictureName1 objectAtIndex:indexPath.row]];
     return cell;
     
@@ -120,11 +98,11 @@
     [self updateLayout];
 }
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-  
-        ContentsViewController *nextVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ContentVC"];
-        [UIApplication sharedApplication].keyWindow.rootViewController = nextVC;
-}
+//- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+//    
+//    ContentsViewController *nextVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ContentVC"];
+//    [UIApplication sharedApplication].keyWindow.rootViewController = nextVC;
+//}
 
 - (void)updateLayout {
     CHTCollectionViewWaterfallLayout *layout =
@@ -132,7 +110,6 @@
     layout.columnCount = self.collectionView.bounds.size.width / self.cellWidth;
     layout.itemWidth = self.cellWidth;
 }
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -145,18 +122,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    pictureName1 = @[@"photo1.jpg", @"photo2.jpg",@"photo3.jpg",@"photo4.jpg",@"photo5.jpg",@"photo6.jpg" ,@"photo7.jpg", @"photo8.jpg"];
+	// Do any additional setup after loading the view.
+    pictureName1 = @[@"photo3.jpg", @"photo4.jpg",@"photo1.jpg",@"photo2.jpg",@"photo7.jpg",@"photo6.jpg" ,@"photo5.jpg", @"photo8.jpg"];
     [self.view addSubview:self.collectionView];
     [self updateLayout];
-    [self.view addSubview:self.button];
-}
-
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-
-    
+  //  [self.view addSubview:self.button];
 }
 
 - (void)didReceiveMemoryWarning

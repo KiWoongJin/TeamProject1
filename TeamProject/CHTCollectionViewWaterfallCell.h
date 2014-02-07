@@ -13,6 +13,7 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *imgBtn;
 @property (weak, nonatomic) IBOutlet UIButton *imgBtn2;
+@property (weak, nonatomic) IBOutlet UIButton *imgBtn3;
 
 
 @end
