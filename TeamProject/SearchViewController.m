@@ -98,8 +98,12 @@
     [_mapView setGpsManagersDelegate:self];
     [_mapView setTrackingMode:![self.mapView getIsTracking]];
     
+   // TMapPoint *point = [[TMapPoint alloc]init];
+   // point = []
     TMapCircle* circle =
-    [[TMapCircle alloc] initWithCoordinate:CLLocationCoordinate2DMake(37.508997, 126.891581)]; [circle setRadius:100];
+    [[TMapCircle alloc] init];
+   // [circle setCenterPoint:]
+    [circle setRadius:100];
     [circle setCircleLineWidth:5];
     [circle setCircleAreaAlpha:0.8];
     [_mapView addTMapCircleID:@"circle_ 01" Circle:circle];
