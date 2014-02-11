@@ -14,6 +14,11 @@
 @property (strong, nonatomic) IBOutlet UIButton *imgBtn;
 @property (weak, nonatomic) IBOutlet UIButton *imgBtn2;
 @property (weak, nonatomic) IBOutlet UIButton *imgBtn3;
+@property (weak, nonatomic) IBOutlet UIImageView *proImage1;
+@property (weak, nonatomic) IBOutlet UILabel *nickName;
+@property (weak, nonatomic) IBOutlet UILabel *placeLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *likeCnt;
+@property (weak, nonatomic) IBOutlet UILabel *comCnt;
 
 @end

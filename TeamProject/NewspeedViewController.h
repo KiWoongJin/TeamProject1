@@ -11,5 +11,8 @@
 @interface NewspeedViewController : UIViewController <UICollectionViewDataSource, CHTCollectionViewDelegateWaterfallLayout>
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic) CGFloat cellWidth;
+@property (readwrite,nonatomic)NSMutableDictionary *totalDic;
+@property (readwrite,nonatomic)NSDictionary *postCount;
+@property (readwrite,nonatomic)NSMutableArray *arrayFeedDic;
 
 @end
