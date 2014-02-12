@@ -15,4 +15,5 @@
 @property (readwrite,nonatomic)NSDictionary *postCount;
 @property (readwrite,nonatomic)NSMutableArray *arrayFeedDic;
 
+-(void)communication;
 @end

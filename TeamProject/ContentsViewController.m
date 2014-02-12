@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIToolbar *toolBar;
 @property (weak, nonatomic) IBOutlet UITextField *userInput;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UILabel *test;
 
 @property (weak, nonatomic) IBOutlet UITableView *table;
 
@@ -40,6 +41,7 @@
     UIImageView *imageView = [[UIImageView alloc]initWithImage:image];
     imageView.frame = CGRectMake(width * pageNo, 0, width, height);
     [self.scrollView addSubview:imageView];
+    self.test.text = fileName;
     loadedPageCount++;
 }
 

@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Newspeed.h"
+#import "AFNetworking.h"
+
 
 @interface CHTCollectionViewWaterfallCell : UICollectionViewCell
 @property (nonatomic, copy) NSString *displayString;

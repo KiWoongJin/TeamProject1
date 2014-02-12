@@ -7,6 +7,8 @@
 //
 
 #import "CHTCollectionViewWaterfallCell.h"
+#import "UIButton+AFNetworking.h"
+#import "UIImageView+AFNetworking.h"
 
 @implementation CHTCollectionViewWaterfallCell
 
