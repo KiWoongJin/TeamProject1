@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MyPageViewController : UIViewController
-
+@property (readwrite,nonatomic)NSMutableDictionary *totalDic;
+- (void)communication;
 @end

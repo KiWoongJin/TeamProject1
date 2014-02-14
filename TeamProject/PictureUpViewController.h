@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface PictureUpViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *place;
+@property (weak, nonatomic) NSString *place2;
 
 @end

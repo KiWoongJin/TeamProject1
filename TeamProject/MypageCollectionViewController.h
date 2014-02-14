@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MypageCollectionViewController : UIViewController
-
+@property (readwrite,nonatomic)NSMutableDictionary *totalDic;
 @end

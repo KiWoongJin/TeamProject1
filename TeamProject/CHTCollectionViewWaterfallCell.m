@@ -30,7 +30,16 @@
 //		self.displayLabel.text = _displayString;
 //	}
 //}
+- (IBAction)moveNew1:(id)sender {
+    [self.delegate moveDetail:self];
+}
+- (IBAction)moveNew2:(id)sender {
+    [self.delegate moveDetail:self];
+}
 
+- (IBAction)moveNew3:(id)sender {
+    [self.delegate moveDetail:self];
+}
 #pragma mark - Life Cycle
 //- (void)dealloc {
 //	[_displayLabel removeFromSuperview];

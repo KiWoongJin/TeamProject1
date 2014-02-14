@@ -73,21 +73,19 @@
 //    [self.collectionView reloadData];
 //}
 - (void)removeImg:(id)sender{
+    NSLog(@"%@",sender);
     NSIndexPath *indexPath = [self.collectionView indexPathForCell:sender];
     NSLog(@"%d", indexPath.row);
+    imageCount --;
     [thArr removeObjectAtIndex:indexPath.row];
+    [picArr removeObjectAtIndex:indexPath.row];
     
+    float width = self.scorllView.bounds.size.width;
+    float height = self.scorllView.bounds.size.height;
+    self.scorllView.contentSize = CGSizeMake(width * imageCount, height);
+    [self loadContentsPage:imageCount-1];
+    pageControl.numberOfPages = imageCount;
     [self.collectionView reloadData];
-    
-//    NSIndexPath *indexPath = [_table indexPathForCell:sender];
-//    Product *product = [[Catalog defaultCatalog] productAt:indexPath.row];
-//    
-//    [self.cart addProduct:product];
-//    
-//    //[cartItems addObject:product];
-//    NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:1];
-//    [_table reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
-    
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return [thArr count];
@@ -95,6 +93,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     ThumbnailCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TH_CELL" forIndexPath:indexPath];
+    cell.delegate = self;
     cell.thumbImage.image = [thArr objectAtIndex:indexPath.row];
     
     return cell;
@@ -172,12 +171,22 @@
     pageControl = [[UIPageControl alloc]initWithFrame:CGRectMake(130, 400, 60, 40)];
     [self.view addSubview:pageControl];
    // pageControl.numberOfPages = imageCount;
+    NSLog(@"3%@", self.place2);
     
     loadedPageCount = 0;
    // [self loadContentsPage:0];
    // [self loadContentsPage:1];
    
  
+}
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+   
+    self.place.text = self.place2;
 }
 
 - (void)didReceiveMemoryWarning

@@ -8,10 +8,14 @@
 
 #import "Newspeed2ViewController.h"
 #import "CHTCollectionViewWaterfallCell.h"
+#import "AFNetworking.h"
+#import "UIButton+AFNetworking.h"
+#import "UIImageView+AFNetworking.h"
 
 #define CELL_WIDTH 160
-#define CELL_COUNT 8
+//#define CELL_COUNT 8
 #define CELL_IDENTIFIER @"TEST2_CELL"
+#define URL @"http://picple.pws12321.cloulu.com/newsFeed/new/0/10/"
 
 @interface Newspeed2ViewController ()
 @property (nonatomic, strong) NSMutableArray *cellHeights;
@@ -22,7 +26,16 @@
 @implementation Newspeed2ViewController
 {
     NSArray *pictureName1;
+    NSDictionary *tempDic;
     
+    NSMutableArray *postId;
+    NSMutableArray *postImg;
+    NSMutableArray *proImg;
+    NSMutableArray *nickName;
+    NSMutableArray *time;
+    NSMutableArray *place;
+    NSMutableArray *likeCnt;
+    NSMutableArray *comCnt;
 }
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
@@ -53,20 +66,30 @@
 
 - (NSMutableArray *)cellHeights {
     if (!_cellHeights) {
-        _cellHeights = [NSMutableArray arrayWithCapacity:CELL_COUNT];
-        for (NSInteger i = 0; i < CELL_COUNT; i++) {
+        _cellHeights = [NSMutableArray arrayWithCapacity:tempDic.count];
+        for (NSInteger i = 0; i < tempDic.count; i++) {
             //            _cellHeights[i] = @(arc4random() % 100 * 2 + 100);
             //   NSString *str = [heights objectAtIndex:i];
             //@([str integerValue]);
-            UIImage *tmp = [UIImage imageNamed:[pictureName1 objectAtIndex:i]];
+            NSURL *postUrl = [NSURL URLWithString:[postImg objectAtIndex:i]];
+            NSData *temp = [NSData dataWithContentsOfURL:postUrl];
             
+            UIImage *tmp = [UIImage imageWithData:temp];
+            if (tmp == NULL) {
+                UIImage *instead = [UIImage imageNamed:@"photo3.jpg"];
+                _cellHeights[i] =@(((instead.size.height*160)/instead.size.width)+50) ;
+                
+            }
+          //  NSLog(@"12");
+            else{
             _cellHeights[i] =@(((tmp.size.height*160)/tmp.size.width)+50) ;
+            }
         }
     }
     return _cellHeights;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 8;
+    return tempDic.count;
 }
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
@@ -77,9 +100,19 @@
     (CHTCollectionViewWaterfallCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CELL_IDENTIFIER
                                                                                 forIndexPath:indexPath];
     
-    UIImage *btnImage = [UIImage imageNamed:[pictureName1 objectAtIndex:indexPath.row]];
-    [cell.imgBtn3 setImage:btnImage forState:UIControlStateNormal];
+  //  UIImage *btnImage = [UIImage imageNamed:[pictureName1 objectAtIndex:indexPath.row]];
+   // [cell.imgBtn3 setImage:btnImage forState:UIControlStateNormal];
     //cell.imgView.image =[UIImage imageNamed:[pictureName1 objectAtIndex:indexPath.row]];
+    NSURL *postUrl = [NSURL URLWithString:[postImg objectAtIndex:indexPath.row]];
+    NSURL *proUrl = [NSURL URLWithString:[proImg objectAtIndex:indexPath.row]];
+    
+    [cell.imgBtn3 setImageForState:UIControlStateNormal withURL:postUrl];
+    [cell.proImage2 setImageWithURL:proUrl];
+    
+    cell.nickName2.text = [nickName objectAtIndex:indexPath.row];
+    cell.placeLabel2.text = [place objectAtIndex:indexPath.row];
+    cell.likeCnt2.text = [NSString stringWithFormat:@"%@",[likeCnt objectAtIndex:indexPath.row]];
+    cell.comCnt2.text = [NSString stringWithFormat:@"%@",[comCnt objectAtIndex:indexPath.row]];
     return cell;
     
 }
@@ -123,12 +156,74 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    pictureName1 = @[@"photo3.jpg", @"photo4.jpg",@"photo1.jpg",@"photo2.jpg",@"photo7.jpg",@"photo6.jpg" ,@"photo5.jpg", @"photo8.jpg"];
+
+    
+    
     [self.view addSubview:self.collectionView];
     [self updateLayout];
   //  [self.view addSubview:self.button];
 }
-
+- (void)communication{
+    
+    
+    postId = [[NSMutableArray alloc]init];
+    postImg = [[NSMutableArray alloc]init];
+    proImg = [[NSMutableArray alloc]init];
+    nickName = [[NSMutableArray alloc]init];
+    time = [[NSMutableArray alloc]init];
+    place = [[NSMutableArray alloc]init];
+    likeCnt = [[NSMutableArray alloc]init];
+    comCnt = [[NSMutableArray alloc]init];
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    [manager GET:URL parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject){
+        
+        NSInteger allCount;
+        tempDic = [responseObject objectForKey:@"posts"];
+        allCount= tempDic.count;
+        
+        for(int i = 0; i < allCount; i++)
+        {
+            NSLog(@"60");
+            
+            self.totalDic=[[NSMutableDictionary alloc]init];
+            
+            self.totalDic = [responseObject objectForKey:@"posts"][i];
+            
+            [postId addObject:[self.totalDic objectForKey:@"post_id"]];
+            [postImg addObject:[self.totalDic objectForKey:@"picture"]];
+            [proImg addObject:[self.totalDic objectForKey:@"profile_picture"]];
+            [nickName addObject:[self.totalDic objectForKey:@"nickname"]];
+            [time addObject:[self.totalDic objectForKey:@"created_time"]];
+            [place addObject:[self.totalDic objectForKey:@"place_name"]];
+            [likeCnt addObject:[self.totalDic objectForKey:@"like_cnt"]];
+            [comCnt addObject:[self.totalDic objectForKey:@"comment_cnt"]];
+            
+            
+        }
+        
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"FEED_INFO_UPDATE" object:Nil];
+        
+    }failure:
+     ^(AFHTTPRequestOperation *operation, NSError *error) {
+         NSLog(@"Error:%@",error);
+     }];
+    
+}
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    [self communication];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(feedInfoUpdate:) name:@"FEED_INFO_UPDATE" object:nil];
+}
+-(void)feedInfoUpdate:(NSNotification *)notification
+{
+   // NSLog(@"135");
+    
+    [self.collectionView reloadData];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

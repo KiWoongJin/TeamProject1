@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0010D59618ADFB53007A30B4 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0010D59518ADFB53007A30B4 /* MapViewController.m */; };
 		0010E16018A9BCD400D835BC /* MapCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0010E15F18A9BCD400D835BC /* MapCell.m */; };
 		0010E1D618AA06B400D835BC /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0010E1C418AA06B400D835BC /* AFHTTPRequestOperation.m */; };
 		0010E1D718AA06B400D835BC /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0010E1C618AA06B400D835BC /* AFHTTPRequestOperationManager.m */; };
@@ -18,6 +19,9 @@
 		0010E1DD18AA06B400D835BC /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 0010E1D318AA06B400D835BC /* AFURLResponseSerialization.m */; };
 		0010E1DE18AA06B400D835BC /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0010E1D518AA06B400D835BC /* AFURLSessionManager.m */; };
 		0010E1E118AA178F00D835BC /* Newspeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 0010E1E018AA178F00D835BC /* Newspeed.m */; };
+		001188FB18AC849C00F2F874 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 001188FA18AC849C00F2F874 /* LoginViewController.m */; };
+		001188FE18AC8FD000F2F874 /* DetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 001188FD18AC8FD000F2F874 /* DetailCell.m */; };
+		0011890118ACE39500F2F874 /* DetailtouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0011890018ACE39500F2F874 /* DetailtouchViewController.m */; };
 		0016914618AB0B4C00EB52DF /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0016913818AB0B4C00EB52DF /* AFNetworkActivityIndicatorManager.m */; };
 		0016914718AB0B4C00EB52DF /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 0016913A18AB0B4C00EB52DF /* UIActivityIndicatorView+AFNetworking.m */; };
 		0016914818AB0B4C00EB52DF /* UIAlertView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 0016913C18AB0B4C00EB52DF /* UIAlertView+AFNetworking.m */; };
@@ -61,6 +65,7 @@
 		00AFF5311890D6D60025EB8D /* NewspeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AFF5301890D6D60025EB8D /* NewspeedViewController.m */; };
 		00AFF5421890FC5F0025EB8D /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AFF5411890FC5F0025EB8D /* SettingViewController.m */; };
 		00BC07DC1897647700D7AE3E /* ThumbnailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BC07DB1897647700D7AE3E /* ThumbnailCell.m */; };
+		00F0E93C18AB83FC002DAB4C /* Newspeed3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F0E93B18AB83FC002DAB4C /* Newspeed3ViewController.m */; };
 		00FF3AE618A4B948004D56BD /* Newspeed2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FF3AE518A4B948004D56BD /* Newspeed2ViewController.m */; };
 		65412CA31886E5A100B512AC /* SelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65412CA21886E5A100B512AC /* SelectViewController.m */; };
 		65412CA61886FABC00B512AC /* ContentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65412CA51886FABC00B512AC /* ContentsViewController.m */; };
@@ -100,6 +105,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0010D59418ADFB53007A30B4 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		0010D59518ADFB53007A30B4 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		0010E15E18A9BCD400D835BC /* MapCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapCell.h; sourceTree = "<group>"; };
 		0010E15F18A9BCD400D835BC /* MapCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapCell.m; sourceTree = "<group>"; };
 		0010E1C318AA06B400D835BC /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -123,6 +130,12 @@
 		0010E1D518AA06B400D835BC /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		0010E1DF18AA178F00D835BC /* Newspeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Newspeed.h; sourceTree = "<group>"; };
 		0010E1E018AA178F00D835BC /* Newspeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Newspeed.m; sourceTree = "<group>"; };
+		001188F918AC849C00F2F874 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		001188FA18AC849C00F2F874 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		001188FC18AC8FD000F2F874 /* DetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCell.h; sourceTree = "<group>"; };
+		001188FD18AC8FD000F2F874 /* DetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCell.m; sourceTree = "<group>"; };
+		001188FF18ACE39500F2F874 /* DetailtouchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailtouchViewController.h; sourceTree = "<group>"; };
+		0011890018ACE39500F2F874 /* DetailtouchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailtouchViewController.m; sourceTree = "<group>"; };
 		00152D6F18A34CBA004573AC /* ThumbDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThumbDelegate.h; sourceTree = "<group>"; };
 		0016913718AB0B4C00EB52DF /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
 		0016913818AB0B4C00EB52DF /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
@@ -212,6 +225,8 @@
 		00AFF5411890FC5F0025EB8D /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		00BC07DA1897647700D7AE3E /* ThumbnailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbnailCell.h; sourceTree = "<group>"; };
 		00BC07DB1897647700D7AE3E /* ThumbnailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbnailCell.m; sourceTree = "<group>"; };
+		00F0E93A18AB83FC002DAB4C /* Newspeed3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Newspeed3ViewController.h; sourceTree = "<group>"; };
+		00F0E93B18AB83FC002DAB4C /* Newspeed3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Newspeed3ViewController.m; sourceTree = "<group>"; };
 		00FF3AE418A4B948004D56BD /* Newspeed2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Newspeed2ViewController.h; sourceTree = "<group>"; };
 		00FF3AE518A4B948004D56BD /* Newspeed2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Newspeed2ViewController.m; sourceTree = "<group>"; };
 		65412CA11886E5A100B512AC /* SelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectViewController.h; sourceTree = "<group>"; };
@@ -473,6 +488,16 @@
 				0010E15F18A9BCD400D835BC /* MapCell.m */,
 				0010E1DF18AA178F00D835BC /* Newspeed.h */,
 				0010E1E018AA178F00D835BC /* Newspeed.m */,
+				00F0E93A18AB83FC002DAB4C /* Newspeed3ViewController.h */,
+				00F0E93B18AB83FC002DAB4C /* Newspeed3ViewController.m */,
+				001188F918AC849C00F2F874 /* LoginViewController.h */,
+				001188FA18AC849C00F2F874 /* LoginViewController.m */,
+				001188FC18AC8FD000F2F874 /* DetailCell.h */,
+				001188FD18AC8FD000F2F874 /* DetailCell.m */,
+				001188FF18ACE39500F2F874 /* DetailtouchViewController.h */,
+				0011890018ACE39500F2F874 /* DetailtouchViewController.m */,
+				0010D59418ADFB53007A30B4 /* MapViewController.h */,
+				0010D59518ADFB53007A30B4 /* MapViewController.m */,
 			);
 			path = TeamProject;
 			sourceTree = "<group>";
@@ -657,11 +682,14 @@
 				0010E1D918AA06B400D835BC /* AFNetworkReachabilityManager.m in Sources */,
 				0010E16018A9BCD400D835BC /* MapCell.m in Sources */,
 				00278B3B18A1D2380091A3F4 /* FollowCell.m in Sources */,
+				0011890118ACE39500F2F874 /* DetailtouchViewController.m in Sources */,
 				0016914C18AB0B4D00EB52DF /* UIWebView+AFNetworking.m in Sources */,
+				001188FB18AC849C00F2F874 /* LoginViewController.m in Sources */,
 				0010E1DE18AA06B400D835BC /* AFURLSessionManager.m in Sources */,
 				0010E1E118AA178F00D835BC /* Newspeed.m in Sources */,
 				00278BC318A212C00091A3F4 /* MypageCell.m in Sources */,
 				00AFF52B1890D1FD0025EB8D /* PictureCell.m in Sources */,
+				0010D59618ADFB53007A30B4 /* MapViewController.m in Sources */,
 				0016914618AB0B4C00EB52DF /* AFNetworkActivityIndicatorManager.m in Sources */,
 				00278BC918A21A770091A3F4 /* MypageCollectionViewController.m in Sources */,
 				0016914B18AB0B4D00EB52DF /* UIProgressView+AFNetworking.m in Sources */,
@@ -673,10 +701,12 @@
 				0010E1DA18AA06B400D835BC /* AFSecurityPolicy.m in Sources */,
 				0010E1D718AA06B400D835BC /* AFHTTPRequestOperationManager.m in Sources */,
 				0016914818AB0B4C00EB52DF /* UIAlertView+AFNetworking.m in Sources */,
+				00F0E93C18AB83FC002DAB4C /* Newspeed3ViewController.m in Sources */,
 				0010E1D818AA06B400D835BC /* AFHTTPSessionManager.m in Sources */,
 				659170FD1886CE650047EBFB /* AppDelegate.m in Sources */,
 				659170F91886CE650047EBFB /* main.m in Sources */,
 				0010E1D618AA06B400D835BC /* AFHTTPRequestOperation.m in Sources */,
+				001188FE18AC8FD000F2F874 /* DetailCell.m in Sources */,
 				00AF7D391891FB4900FB9521 /* PictureUpViewController.m in Sources */,
 				0010E1DD18AA06B400D835BC /* AFURLResponseSerialization.m in Sources */,
 				00278B3518A1D2180091A3F4 /* LikeCell.m in Sources */,

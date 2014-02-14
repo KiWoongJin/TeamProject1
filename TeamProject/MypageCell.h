@@ -9,6 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface MypageCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *imgView;
+
+@property (weak, nonatomic) IBOutlet UILabel *nick;
+@property (weak, nonatomic) IBOutlet UILabel *title;
+@property (weak, nonatomic) IBOutlet UILabel *place;
+@property (weak, nonatomic) IBOutlet UILabel *like;
+@property (weak, nonatomic) IBOutlet UILabel *com;
+@property (weak, nonatomic) IBOutlet UIImageView *proImg;
+@property (weak, nonatomic) IBOutlet UIButton *timeImg;
 
 @end

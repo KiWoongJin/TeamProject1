@@ -10,4 +10,6 @@
 
 @interface ContentsViewController : UIViewController
 //@property (weak, nonatomic) NSString *imgName;
+@property (weak, nonatomic) NSString *nextURL;
+@property (readwrite,nonatomic)NSMutableDictionary *pictureDic;
 @end

@@ -10,4 +10,7 @@
 
 @protocol ThumbDelegate <NSObject>
 - (void)removeImg:(id)sender;
+- (void)moveDetail:(id)sender;
+//- (void)moveDetail2:(id)sender;
+//- (void)moveDetail3:(id)sender;
 @end
